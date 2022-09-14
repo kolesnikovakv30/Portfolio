@@ -37,7 +37,7 @@ update  users set skill=2000000 where level_id<2;
 
 6. Выбрать user_name всех пользователей уровня admin используя подзапрос								
 select users.users_name from users where users.level_id=(select levels.id from levels 
-where levels.level_name='admin';
+where levels.level_name='admin');
 							
 7. Выбрать user_name всех пользователей уровня admin используя join								
 select users.user_name,levels.levels.level_name from users join levels on levels.id=users.level_id
