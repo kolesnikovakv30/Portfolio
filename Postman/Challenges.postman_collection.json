@@ -1,0 +1,1265 @@
+{
+	"info": {
+		"_postman_id": "0b4bbce1-45a5-417f-a3af-a8fbae11ef12",
+		"name": "Challenges",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST /challenger (201)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://apichallenges.herokuapp.com/challenger",
+					"protocol": "https",
+					"host": [
+						"apichallenges",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"challenger"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /challenges (200)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-CHALLENGER",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://apichallenges.herokuapp.com/challenges",
+					"protocol": "https",
+					"host": [
+						"apichallenges",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"challenges"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /todos/{id} (200)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-CHALLENGER",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/todos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "80",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /todos (200) no accept",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-CHALLENGER",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/todos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "80",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH /heartbeat (500)",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "X-CHALLENGER",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/heartbeat",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"heartbeat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TRACE /heartbeat (501)",
+			"request": {
+				"method": "TRACE",
+				"header": [
+					{
+						"key": "X-CHALLENGER",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/heartbeat",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"heartbeat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /heartbeat (405)",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "X-CHALLENGER",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/heartbeat",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"heartbeat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /todos (201)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CHALLENGER",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"I study postman\",\r\n  \"doneStatus\": true,\r\n  \"description\": \"postman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/todos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /heartbeat (204)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-CHALLENGER",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"I study postman\",\r\n  \"doneStatus\": true,\r\n  \"description\": \"postman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/heartbeat",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"heartbeat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /secret/note (401)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-CHALLENGER",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					},
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "1233",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/secret/note",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"secret",
+						"note"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /todos (200) ?filter",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-CHALLENGER",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/todos?doneStatus=true",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "doneStatus",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /todos (200) XML",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-CHALLENGER",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/todos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /todos (200) XML pref",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-CHALLENGER",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml, application/json`",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/todos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /todos (200) JSON",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-CHALLENGER",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/todos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /todos/{id} (404)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-CHALLENGER",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/todo?id=111",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todo"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "111"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /todo (404) not plural",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-CHALLENGER",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/todo",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /secret/note (Bearer)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "37540865-d6b0-4f89-9736-fc4cda34174f",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-CHALLENGER",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					},
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "37540865-d6b0-4f89-9736-fc4cda34174f",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/secret/note",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"secret",
+						"note"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /secret/note (200) Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-CHALLENGER",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					},
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "37540865-d6b0-4f89-9736-fc4cda34174f",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/secret/note",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"secret",
+						"note"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HEAD /todos (200)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "HEAD",
+				"header": [
+					{
+						"key": "X-CHALLENGER",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/todos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /todos (400) doneStatus",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CHALLENGER",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"I study postman\",\r\n  \"doneStatus\": 1,\r\n  \"description\": \"postman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/todos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /secret/note (200)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CHALLENGER",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					},
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "37540865-d6b0-4f89-9736-fc4cda34174f",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n     \"note\":\"my note\"\r\n     }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/secret/note",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"secret",
+						"note"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /secret/note (Bearer)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "37540865-d6b0-4f89-9736-fc4cda34174f",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CHALLENGER",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					},
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "37540865-d6b0-4f89-9736-fc4cda34174f",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n     \"note\":\"my note\"\r\n     }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/secret/note",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"secret",
+						"note"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /secret/note (403)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CHALLENGER",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					},
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "12345",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n     \"note\":\"my note\"\r\n     }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/secret/note",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"secret",
+						"note"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /secret/note (401)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CHALLENGER",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					},
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "12345",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n     \"note\":\"my note\"\r\n     }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/secret/note",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"secret",
+						"note"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /todos/{id} (200)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CHALLENGER",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"привет\",\r\n  \"doneStatus\": true,\r\n  \"description\": \"sint occaecat cupida\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/todos/217",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos",
+						"217"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /todos JSON",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CHALLENGER",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"title\": \"create todo process payroll\",\r\n        \"doneStatus\": true,\r\n        \"description\": \"\"\r\n   }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/todos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /todos JSON to XML",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CHALLENGER",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"title\": \"create todo process payroll\",\r\n        \"doneStatus\": true,\r\n        \"description\": \"\"\r\n   }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/todos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /todos XML to JSON",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CHALLENGER",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"title\": \"create todo process payroll\",\r\n        \"doneStatus\": true,\r\n        \"description\": \"\"\r\n   }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/todos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /todos (415)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CHALLENGER",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/bobo",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"title\": \"create todo process payroll\",\r\n        \"doneStatus\": null,\r\n        \"description\": привет\r\n   }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/todos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /secret/token (201)",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CHALLENGER",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/secret/token",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"secret",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /secret/token (401)",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "sasha",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CHALLENGER",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/secret/token",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"secret",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /todos XML",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CHALLENGER",
+						"value": "{{X-Challenger}}",
+						"type": "default"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<todo>\r\n  <doneStatus>true</doneStatus>\r\n  <description>sint occaecat cupida</description>\r\n  <title>anim id est laboruma</title>\r\n</todo>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/todos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
